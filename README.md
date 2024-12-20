@@ -305,7 +305,7 @@ class PayThem:
 
     def set_monto(self, monto):
         if monto < 0:
-            raise ValueError("El monto no puede ser negativo.")
+            print("El monto no puede ser negativo.")
         self.__monto = monto
 
     def get_monto(self):
@@ -313,7 +313,7 @@ class PayThem:
 
     def pagar_con_tarjeta(self, numero, cvv):
         if len(numero) < 4:
-            raise ValueError("El número de tarjeta debe tener al menos 4 dígitos.")
+            print("El número de tarjeta debe tener al menos 4 dígitos.")
         print(f"Pagando COP {self.__monto} con tarjeta {numero[-4:]}")
 
     def pagar_en_efectivo(self, monto_entregado):
