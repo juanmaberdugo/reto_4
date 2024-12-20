@@ -348,7 +348,6 @@ print(order.get_order_details())
 order.generate_bill("factura.txt")
 print("Factura generada en el archivo 'factura.txt'.")
 
-
 pago = PayThem()
 pago.set_monto(order.calculate_total())
 pago.pagar_con_tarjeta("1234567890123456", 123)
